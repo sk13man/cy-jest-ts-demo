@@ -1,0 +1,19 @@
+{
+  "workbench.colorTheme": "Andromeda",
+  "workbench.startupEditor": "none",
+  "window.zoomLevel": 1,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "editor.fontFamily": "Droid Sans Mono for Powerline",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript, javascript, json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "touchbarCommandPalette.commandPalette": true,
+  "touchbarCommandPalette.sidebar": true,
+  "touchbarCommandPalette.quickOpen": false,
+  "keyboard.touchbar.ignored": ["workbench.action.debug.start", "workbench.action.debug.run"]
+}
