@@ -1,11 +1,11 @@
-describe('Cypress works', () => {
-  it('works', () => {
-    cy.visit('https://github.com', { timeout: 30000 });
-    cy.url().should('equal', 'https://github.com/');
-    cy.log(cy.url().toString());
+describe('Cypress demo', () => {
+  it('open browser', () => {
+    cy.visit('https://github.com');
+    cy.url().should('include', 'github');
   });
 
-  it('cypress opens browser', () => {
-    // expect(url).to.equal("https://github.com");
+  it('throw error and save screenshot to report', () => {
+    cy.title().then((t) => cy.log(t));
+    cy.url().should('equal', 'github');
   });
 });

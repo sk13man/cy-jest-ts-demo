@@ -11,7 +11,7 @@
     "cypress": "10.1.0",
     "jest": "28.1.1",
     "ts-node": "^10.8.1",
-    "typescript": "^4.7.0"
+    "typescript": "^4.7.4"
   },
   "devDependencies": {
     "@types/chai": "^4.3.1",
