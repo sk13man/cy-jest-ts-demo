@@ -5,18 +5,19 @@
     "jest": "jest",
     "report": "open ./cypress/reports/html/index.html",
     "cy:run": "cypress run -C './cypress/cypress.config.ts'",
-    "cy:open": "cypress open -C './cypress/cypress.config.ts'"
+    "cy:open": "cypress open -C './cypress/cypress.config.ts'",
+    "CI": "npx cypress run --record --key 43ed99a4-d6b3-4512-851f-b0604af808c1 -C './cypress/cypress.config.ts'",
+    "cache": "cypress cache clear"
   },
   "dependencies": {
-    "cypress": "10.1.0",
     "jest": "28.1.1",
-    "ts-node": "^10.8.1",
     "typescript": "^4.7.4"
   },
   "devDependencies": {
     "@types/chai": "^4.3.1",
     "@types/jest": "28.1.2",
     "@types/mocha": "^9.1.1",
+    "cypress": "^10.1.0",
     "cypress-mochawesome-reporter": "^3.1.0",
     "prettier": "2.7.1",
     "ts-jest": "28.0.5"

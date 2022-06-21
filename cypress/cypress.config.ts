@@ -1,6 +1,8 @@
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
+  projectId: '755tvm',
+
   retries: 0,
   video: false,
   fixturesFolder: false,
