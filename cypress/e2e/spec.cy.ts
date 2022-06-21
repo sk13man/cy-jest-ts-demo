@@ -1,11 +1,12 @@
 describe('Cypress demo', () => {
-  it('open browser', () => {
+  it('visit site', () => {
     cy.visit('https://github.com');
     cy.url().should('include', 'github');
   });
 
-  xit('throw error and save screenshot to report', () => {
-    cy.title().then((t) => cy.log(t));
-    cy.url().should('equal', 'github');
+  it('change URL abd attach screenshot', () => {
+    cy.visit('https://www.cypress.io');
+    cy.screenshot({ capture: 'viewport' });
+    cy.url().should('not.contain', 'github');
   });
 });

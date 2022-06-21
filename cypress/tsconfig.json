@@ -1,13 +1,8 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "lib": ["ES2015", "DOM"],
-    "noEmit": true,
-    "noImplicitAny": false,
     "types": ["cypress", "node"]
   },
-  "include": ["../cypress/", "./cypress.d.ts"],
+  "include": ["../cypress/", "./cypress.d.ts", "../cypress.config.ts"],
   "exclude": ["../jest/", "../node_modules/", "./reports/"]
 }

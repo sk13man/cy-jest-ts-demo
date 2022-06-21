@@ -1,18 +1,16 @@
 describe('Jest demo', () => {
+  afterEach((done) => {
+    setTimeout(() => {
+      console.log('Log from Hook!');
+      done();
+    }, 3000);
+  });
   it('init test 1', () => {
-    console.log('Log from Jest');
+    console.log('Log from test1');
     expect(true).toBe(true);
   });
-  it('init test 2', () => {
-    console.log('Log from Jest');
-    expect(true).toBe(true);
-  });
-  it('init test 3', () => {
-    console.log('Log from Jest');
-    expect(true).toBe(true);
-  });
-  it('init test 4', () => {
-    console.log('Log from Jest');
+  it('waiting test', () => {
+    console.log('Log from test2');
     expect(true).toBe(true);
   });
 });

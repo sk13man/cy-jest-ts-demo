@@ -1,15 +1,13 @@
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
-  projectId: '755tvm',
-
-  retries: 0,
+  viewportWidth: 1280,
+  viewportHeight: 720,
   video: false,
   fixturesFolder: false,
-  viewportWidth: 1920,
-  viewportHeight: 1080,
-  screenshotsFolder: 'cypress/reports/screenshots',
   screenshotOnRunFailure: true,
+
+  screenshotsFolder: './cypress/reports/screenshots',
   reporter: 'cypress-mochawesome-reporter',
 
   reporterOptions: {
