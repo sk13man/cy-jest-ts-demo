@@ -4,9 +4,9 @@
   "scripts": {
     "jest": "jest",
     "report": "open ./cypress/reports/html/index.html",
-    "cy:run": "cypress run -C './cypress/cypress.config.ts'",
-    "cy:open": "cypress open -C './cypress/cypress.config.ts'",
-    "CI": "npx cypress run --record --key 43ed99a4-d6b3-4512-851f-b0604af808c1 -C './cypress/cypress.config.ts'",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open'",
+    "CI": "npx cypress run --record --key 43ed99a4-d6b3-4512-851f-b0604af808c1'",
     "cache": "cypress cache clear"
   },
   "dependencies": {
