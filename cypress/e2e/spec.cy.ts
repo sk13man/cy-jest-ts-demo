@@ -4,7 +4,7 @@ describe('Cypress demo', () => {
     cy.url().should('include', 'github');
   });
 
-  it('throw error and save screenshot to report', () => {
+  xit('throw error and save screenshot to report', () => {
     cy.title().then((t) => cy.log(t));
     cy.url().should('equal', 'github');
   });
