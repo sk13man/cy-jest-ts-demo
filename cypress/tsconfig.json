@@ -3,6 +3,6 @@
   "compilerOptions": {
     "types": ["cypress", "node"]
   },
-  "include": ["../cypress/", "./cypress.d.ts", "../cypress.config.ts"],
+  "include": ["../cypress/", "cypress.d.ts", "cypress.config.ts"],
   "exclude": ["../jest/", "../node_modules/", "./reports/"]
 }

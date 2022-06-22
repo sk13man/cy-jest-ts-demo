@@ -5,9 +5,9 @@ export default defineConfig({
   viewportHeight: 720,
   video: false,
   fixturesFolder: false,
-  screenshotOnRunFailure: true,
 
-  screenshotsFolder: './cypress/reports/screenshots',
+  screenshotOnRunFailure: true,
+  screenshotsFolder: './reports/screenshots',
   reporter: 'cypress-mochawesome-reporter',
 
   reporterOptions: {
