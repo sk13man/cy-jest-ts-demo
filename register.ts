@@ -1,7 +1,8 @@
 /// <reference types="cypress" />
-const addContext = require("mochawesome/addContext");
+// const addContext = require("mochawesome/addContext");
+import addContext from 'mochawesome/addContext';
 
-const screenshotsFolder = Cypress.config("screenshotsFolder");
+const screenshotsFolder = Cypress.config('screenshotsFolder');
 
 Cypress.Screenshot.defaults({
   onAfterScreenshot(_el, details) {
@@ -9,21 +10,19 @@ Cypress.Screenshot.defaults({
   },
 });
 
-Cypress.on("test:after:run", (test) => {
+Cypress.on('test:after:run', (test) => {
   if (!Cypress.Mochawesome) {
     return;
   }
 
-  Cypress.Mochawesome.attempts.push(
-    Cypress.Mochawesome.currentAttemptScreenshots
-  );
+  Cypress.Mochawesome.attempts.push(Cypress.Mochawesome.currentAttemptScreenshots);
   Cypress.Mochawesome.currentAttemptScreenshots = [];
 
   if (test.final) {
     addContext(
       { test },
       {
-        title: "cypress-mochawesome-reporter-screenshots",
+        title: 'cypress-mochawesome-reporter-screenshots',
         value: Cypress.Mochawesome.attempts,
       }
     );
@@ -36,7 +35,7 @@ Cypress.on("test:after:run", (test) => {
   }
 });
 
-Cypress.Commands.add("addTestContext", (context) => {
+Cypress.Commands.add('addTestContext', (context) => {
   if (!Cypress.Mochawesome) {
     Cypress.Mochawesome = createMochawesomeObject();
   }
@@ -45,11 +44,9 @@ Cypress.Commands.add("addTestContext", (context) => {
 });
 
 function saveScreenshotReference(details) {
-  const normalizedScreenshotPath = details.path.replace(screenshotsFolder, "");
+  const normalizedScreenshotPath = details.path.replace(screenshotsFolder, '');
 
-  const title = normalizedScreenshotPath.includes("(failed)")
-    ? "Failed screenshot"
-    : "Screenshot";
+  const title = normalizedScreenshotPath.includes('(failed)') ? 'Failed screenshot' : 'Screenshot';
 
   if (!Cypress.Mochawesome) {
     Cypress.Mochawesome = createMochawesomeObject();
