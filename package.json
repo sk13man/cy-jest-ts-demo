@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "jest": "jest",
-    "cy:run": "cypress run",
-    "cy:open": "cypress open",
+    "cy:run": "cypress run -C './cypress/cypress.config.ts'",
+    "cy:open": "cypress open -C './cypress/cypress.config.ts'",
     "report": "open ./cypress/reports/html/index.html"
   },
   "dependencies": {},

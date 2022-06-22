@@ -7,7 +7,7 @@ export default defineConfig({
   fixturesFolder: false,
 
   screenshotOnRunFailure: true,
-  screenshotsFolder: 'cypress/reports/screenshots',
+  screenshotsFolder: './reports/screenshots',
   reporter: 'cypress-mochawesome-reporter',
 
   reporterOptions: {
