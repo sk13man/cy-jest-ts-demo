@@ -5,7 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install modules
-        uses: actions/checkout@v2
         run: npm install
       - name: Jest run
         run: npm run jest
