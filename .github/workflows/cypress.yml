@@ -6,12 +6,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
           config-file: cypress/cypress.config.ts
-          start: npm run cy:run, npm run jest
+          start: npm run jest, npm run cy:run
       # - name: Jest run
       #   uses: willcaul/jest-github-action@v2
       #   with:
