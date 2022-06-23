@@ -1,16 +1,24 @@
 name: Jest + Cypress Tests
 on: [push]
 jobs:
+  jest-run:
+  runs-on: ubuntu-latest
+    steps:
+      - name: Install modules
+      - uses: actions/checkout@v2
+        run: npm install
+      - name: Jest run
+        run: npm run jest
   cypress-run:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      # - name: Checkout
+      #   uses: actions/checkout@v2
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
           config-file: cypress/cypress.config.ts
-          start: npm run jest, npm run cy:run
+          start: npm run cy:run
       # - name: Jest run
       #   uses: willcaul/jest-github-action@v2
       #   with:
