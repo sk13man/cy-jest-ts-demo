@@ -3,16 +3,22 @@ import { defineConfig } from 'cypress';
 export default defineConfig({
   viewportWidth: 1280,
   viewportHeight: 720,
-  video: false,
+
+  video: true,
   fixturesFolder: false,
 
   screenshotOnRunFailure: true,
-  screenshotsFolder: './reports/screenshots',
+  videosFolder: './cypress/reports/videos',
+  screenshotsFolder: './cypress/reports/screenshots',
   reporter: 'cypress-mochawesome-reporter',
 
   reporterOptions: {
     inlineAssets: true,
     charts: true,
+
+    debug: false,
+    quiet: true,
+
   },
 
   e2e: {

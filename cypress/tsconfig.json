@@ -1,7 +1,7 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "types": ["cypress", "node"]
+    "types": ["node"]
   },
   "include": ["../cypress/", "cypress.d.ts", "cypress.config.ts"],
   "exclude": ["../jest/", "../node_modules/", "./reports/"]

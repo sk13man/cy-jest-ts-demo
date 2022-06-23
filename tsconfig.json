@@ -8,5 +8,6 @@
     "noImplicitAny": false
   },
   // only compile the production TS files
-  "include": ["**/*"]
+  "include": ["**/*"],
+  "exclude": ["./register.ts"]
 }
