@@ -1,14 +1,14 @@
 name: Cypress Tests
 on: [push]
 jobs:
-  # jest-run:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - name: Install modules
-  #       run: npm install
-  #     - name: Jest run
-  #       run: npm run jest
+  jest-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: npm install
+      - name: Jest run
+        run: npm run jest
   cypress-run:
     runs-on: ubuntu-latest
     steps:
