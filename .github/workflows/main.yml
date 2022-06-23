@@ -16,6 +16,8 @@ jobs:
           config-file: cypress/cypress.config.ts
           start: npm run cy:run
       - name: Jest run
-        uses: cypress-io/github-action@v4
+        uses: willcaul/jest-github-action@v2
         with:
-          start: npm run jest
+          coverage-comment: false
+          working-directory: 'jest'
+          test-command: npm run jest
