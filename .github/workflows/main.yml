@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Jest + Cypress Tests
 
 on: [push]
 
@@ -10,16 +10,10 @@ jobs:
         uses: actions/checkout@v2
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
+      - name: Jest run
+        uses: stefanoeb/jest-action@1.0.3
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
           config-file: cypress/cypress.config.ts
           start: npm run cy:run
-
-  jest-run:
-    runs-on: ubuntu-latest
-      - name: Checkout
-        uses: actions/checkout@v2
-    steps:
-      - name: Jest run
-        uses: stefanoeb/jest-action@1.0.3
