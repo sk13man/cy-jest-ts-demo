@@ -15,5 +15,10 @@ jobs:
         with:
           config-file: cypress/cypress.config.ts
           start: npm run cy:run
+      # - name: Jest run
+      #   uses: stefanoeb/jest-action@1.0.3
+  jest-run:
+    runs-on: ubuntu-latest
+    steps:
       - name: Jest run
         uses: stefanoeb/jest-action@1.0.3
