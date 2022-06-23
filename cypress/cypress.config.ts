@@ -3,6 +3,7 @@ import { defineConfig } from 'cypress';
 export default defineConfig({
   viewportWidth: 1280,
   viewportHeight: 720,
+
   video: true,
   fixturesFolder: false,
 
@@ -14,8 +15,10 @@ export default defineConfig({
   reporterOptions: {
     inlineAssets: true,
     charts: true,
+
     debug: false,
     quiet: true,
+
   },
 
   e2e: {
