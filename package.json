@@ -4,7 +4,8 @@
   "scripts": {
     "jest": "jest",
     "cy:run": "cypress run -C './cypress/cypress.config.ts'",
-    "cy:open": "cypress open -C './cypress/cypress.config.ts'"
+    "cy:open": "cypress open -C './cypress/cypress.config.ts'",
+    "clean": "rm -rf './cypress/report"
   },
   "devDependencies": {
     "@types/jest": "28.1.3",

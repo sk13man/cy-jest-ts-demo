@@ -6,7 +6,6 @@ export default defineConfig({
 
   video: true,
   fixturesFolder: false,
-
   screenshotOnRunFailure: true,
   videosFolder: './cypress/reports/videos',
   screenshotsFolder: './cypress/reports/screenshots',
@@ -15,10 +14,8 @@ export default defineConfig({
   reporterOptions: {
     inlineAssets: true,
     charts: true,
-
     debug: false,
     quiet: true,
-
   },
 
   e2e: {
