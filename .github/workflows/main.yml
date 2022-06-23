@@ -15,3 +15,5 @@ jobs:
         with:
           config-file: cypress/cypress.config.ts
           start: npm run cy:run
+      - name: Jest run
+        uses: stefanoeb/jest-action@1.0.3
