@@ -11,6 +11,7 @@ jobs:
         run: npm run jest
   cypress-run:
     if: success()
+    needs: [jest-run]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
