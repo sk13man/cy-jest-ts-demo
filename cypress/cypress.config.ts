@@ -16,6 +16,7 @@ export default defineConfig({
     charts: true,
     debug: false,
     quiet: true,
+    json: true
   },
 
   e2e: {
