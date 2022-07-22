@@ -20,6 +20,8 @@ export default defineConfig({
   },
 
   e2e: {
+    experimentalSessionAndOrigin: true,
+
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);
     },
