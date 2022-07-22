@@ -16,10 +16,12 @@ export default defineConfig({
     charts: true,
     debug: false,
     quiet: true,
-    json: true
+    json: true,
   },
 
   e2e: {
+    experimentalSessionAndOrigin: true,
+
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);
     },

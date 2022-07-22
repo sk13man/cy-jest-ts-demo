@@ -5,7 +5,7 @@ describe('Cypress demo', () => {
   });
 
   it('change URL and attach screenshot', () => {
-    cy.visit('https://www.cypress.io');
+    cy.visit('https://www.google.com/');
     cy.screenshot({ capture: 'viewport' });
     cy.url().should('not.contain', 'github');
   });
